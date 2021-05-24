@@ -1,0 +1,40 @@
+# traefik.yml
+api:
+  dashboard: true
+ 
+# Definicion de los entrypoints
+entryPoints:
+  web:
+    address: :80
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+ 
+  websecure:
+    address: :443
+    http:
+      middlewares:
+        - secureHeaders@file
+      tls:
+        certResolver: letsencrypt
+ 
+# Proveedores: Docker y configuracion dinamica mediante provider de tipo file.
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+  file:
+    filename: "traefik_dynamic.yml"
+ 
+# Configuracion Let's Encrypt que usaremos en el entrypoint websecure
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      email: jocadero@me.com
+      storage: acme.json
+      keyType: EC384
+      httpChallenge:
+        entryPoint: web
+log:
+  level: DEBUG

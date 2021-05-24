@@ -1,0 +1,17 @@
+server {
+    server_name jocadero.com www.jocadero.com;
+    root /var/www/jocadero;
+    index index.html;
+
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/jocadero.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/jocadero.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; 
+    ssl_dhparam /etc/letsencrypt/ssl-dhpar
+
+server {
+    return 301 https://jocadero.com$request_uri;
+    listen 80;
+    server_name jocadero.com www.jocadero.com;
+    return 404;
+}
