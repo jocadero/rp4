@@ -1,0 +1,8 @@
+git init
+git add .
+git commit -m "Primer commit docker"
+git branch -M main
+git status
+git remote add origin https://github.com/jocadero/rp4
+git push -u origin main --force
+git status
