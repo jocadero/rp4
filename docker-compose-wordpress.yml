@@ -1,0 +1,35 @@
+version: '3.0'
+
+services:
+  wpdb:
+    image: jsurf/rpi-mariadb
+    container_name: wpdb
+    volumes:
+      - ./wordpress/db_data:/var/lib/mysql
+    restart: unless-stopped
+    env_file:
+      - ./wordpress/wp_pass.env
+    networks:
+      - default
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress
+    depends_on:
+      - wpdb
+    restart: unless-stopped
+    env_file:
+      - ./wordpress/wp_pass.env
+    volumes:
+      - ./wordpress/wp-data:/var/www/html/wp-content
+    networks:
+      - proxy
+      - default
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.wordpress-secure.entrypoints=websecure"
+      - "traefik.http.routers.wordpress-secure.rule=Host(`voxmarchena.es`, `www.voxmarchena.es`)"
+ 
+networks:
+  proxy:
+    external: true
