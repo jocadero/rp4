@@ -1,0 +1,26 @@
+version: '2'
+services:
+  homebridge:
+    container_name: homebridge
+    image: oznu/homebridge:latest
+    restart: unless-stopped
+    networks:
+      - proxy
+      - host
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - HOMEBRIDGE_CONFIG_UI=1
+      - HOMEBRIDGE_CONFIG_UI_PORT=8581
+    volumes:
+      - ./homebridge:/homebridge
+    labels:
+      - "traefik.enable=true"
+      ## HTTP Routers
+      - "traefik.http.routers.homebridge-secure.entrypoints=websecure"
+      - "traefik.http.routers.homebridge-secure.rule=Host(`homebridge.jocadero.com`)"
+      - "traefik.http.services.homebridge.loadbalancer.server.port=8581"
+
+networks:
+  proxy:
+    external: true
