@@ -12,9 +12,8 @@ http:
     user-auth:
       basicAuth:
         users:
-           - "admin:$apr1$37kcgOGy$r32dfu57VpU6Eu42VSy77."
-#          - "admin:$apr1$KDpiuSPk$4LpNEykKzVOcYxbbqDANV/"
- 
+          - "jocadero:$apr1$e7Feei3b$6gyebcu7PWXxb2PYViiVq/"  
+#           - "admin:$apr1$37kcgOGy$r32dfu57VpU6Eu42VSy77."
 tls:
   options:
     default:

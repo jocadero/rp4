@@ -1,0 +1,112 @@
+{
+    "bridge": {
+        "name": "Homebridge 47DB",
+        "username": "0E:E1:D8:4E:47:DB",
+        "port": 52825,
+        "pin": "031-45-154"
+    },
+    "platforms": [
+        {
+            "platform": "BroadlinkRM",
+            "name": "Broadlink RM",
+            "host": [
+                {
+                    "address": "192.168.100.110",
+                    "mac": "78:0f:77:fd:80:1a",
+                    "isRFSupported": true
+                }
+            ],
+            "hideScanFrequencyButton": false,
+            "hideLearnButton": false,
+            "hideWelcomeMessage": true,
+            "accessories": [
+                {
+                    "name": "Tele",
+                    "type": "switch",
+                    "pingIPAddress": "192.168.100.121",
+                    "pingFrequency": 5,
+                    "pingIPAddressStateOnly": true,
+                    "data": {
+                        "on": [
+                            {
+                                "data": "b21634000900013d0b1e0b1e0b1e0b1e0b1f0b1f0b1f0a1f0b1e1f0a1f0a1f0a1f0a1f0b1f0b1f0b1f0b0a1f1f0a0a1f1e0b0b1e1f0b0b2000000000",
+                                "pause": 0.5
+                            },
+                            {
+                                "data": "260064026f370f0d10280f0d0f0e0f0b100e0e0e0f0d100d0f0d0f0d0f0d0f0e0e290f0e0f0d0f0d0f0d0e0e0f0e0e0e0e0e0e0e10280f0d0e0d100e0e0e0e0d100d0f0e0f0d0e2a0f0d0e290f290f290f280f0d0f0e0e290f0d0f290f290f280f290f0d0e2a0f00095d70360f0e0e290f0d0f0e0e0e0f0d0f0d0f0e0f0d0e0e0f0d0f0e0e0e0f28100d0f0d0f0d0f0d0f0e0f0d0e0e0f0d0f0e0e290f0e0e0e0e0e0e0e0f0d0f0e0f0d0e0e0e2a0f0d0e2a0f280f290e29100d0e0e0e2a0f0d0e290f290f290f280f0d0f290f00095d6f380f0d0f290f0d0f0d0e0e0f0e0e0e0e0e0e0e0f0e0f0d0e0e0e0e0f290f0d0e0e0f0e0e0e0e0e0e0e0f0e0f0d0f0d0e2a0f0d0e0e0f0d0f0e0e0e0e0e0f0d0f0e0e290f0d0f290f290f280f290f0d0e0e0e2a0f0d0e2a0f280f290f280f0e0e290f00095e6f370f0d0f290f0d0e0f0e0e0e0e0e0e0e0f0e0e0e0e0e0e0e0f0e0e0e290f0e0e0e0e0e0e0e0f0e0e0e0e0e0f0d0f0e0e290f0d0f0e0e0e0e0e0e0e0f0e0e0e0e0e0e2a0e0e0e2a0e290f290f280f0e0e0e0e290f0e0f280f290f280f290e0e0e2a0f00095d6f380f0d0e290f0e0f0d0e0e0e0e0f0e0e0e0e0e0e0e0f0e0e0e0e0e0e2a0e0e0f0d0e0e0f0e0e0e0e0e0e0e0f0e0e0e0e290f0e0f0d0e0e0e0e0f0e0e0e0e0e0e0e0f290e0e0e2a0e290f290e2a0e0e0e0e0e2a0e0e0e2a0e290e2a0e290f0e0f280f00095d6f380f0d0e2a0f0d0e0e0f0e0e0e0e0e0e0e0f0e0e0e0e0e0e0e0f0e0e290f0d0f0e0e0e0e0e0e0e0f0e0e0e0e0e0f0d0f290f0d0e0e0f0e0e0e0e0e0e0e0f0e0e0e0f290e0e0e290f290f2810280f0d0f0e0e290e0e0f290f290f280f290f0d0e2a0f000d0500000000"
+                            }
+                        ],
+                        "off": "b2ad34000900013c0a1f0a1f0a1f0a1f0a1f0b1e0a1f0a1f0a1f1e0b1e0b1e0b1e0b1e0b1e0b1e0b1e0b0a1f1e0b0a1f0a1f0a1f1f0b0a2000000000"
+                    }
+                },
+                {
+                    "name": "TV",
+                    "type": "switch",
+                    "pingIPAddress": "192.168.100.121",
+                    "pingFrequency": 5,
+                    "pingIPAddressStateOnly": true,
+                    "data": {
+                        "on": "260064026f370f0d10280f0d0f0e0f0b100e0e0e0f0d100d0f0d0f0d0f0d0f0e0e290f0e0f0d0f0d0f0d0e0e0f0e0e0e0e0e0e0e10280f0d0e0d100e0e0e0e0d100d0f0e0f0d0e2a0f0d0e290f290f290f280f0d0f0e0e290f0d0f290f290f280f290f0d0e2a0f00095d70360f0e0e290f0d0f0e0e0e0f0d0f0d0f0e0f0d0e0e0f0d0f0e0e0e0f28100d0f0d0f0d0f0d0f0e0f0d0e0e0f0d0f0e0e290f0e0e0e0e0e0e0e0f0d0f0e0f0d0e0e0e2a0f0d0e2a0f280f290e29100d0e0e0e2a0f0d0e290f290f290f280f0d0f290f00095d6f380f0d0f290f0d0f0d0e0e0f0e0e0e0e0e0e0e0f0e0f0d0e0e0e0e0f290f0d0e0e0f0e0e0e0e0e0e0e0f0e0f0d0f0d0e2a0f0d0e0e0f0d0f0e0e0e0e0e0f0d0f0e0e290f0d0f290f290f280f290f0d0e0e0e2a0f0d0e2a0f280f290f280f0e0e290f00095e6f370f0d0f290f0d0e0f0e0e0e0e0e0e0e0f0e0e0e0e0e0e0e0f0e0e0e290f0e0e0e0e0e0e0e0f0e0e0e0e0e0f0d0f0e0e290f0d0f0e0e0e0e0e0e0e0f0e0e0e0e0e0e2a0e0e0e2a0e290f290f280f0e0e0e0e290f0e0f280f290f280f290e0e0e2a0f00095d6f380f0d0e290f0e0f0d0e0e0e0e0f0e0e0e0e0e0e0e0f0e0e0e0e0e0e2a0e0e0f0d0e0e0f0e0e0e0e0e0e0e0f0e0e0e0e290f0e0f0d0e0e0e0e0f0e0e0e0e0e0e0e0f290e0e0e2a0e290f290e2a0e0e0e0e0e2a0e0e0e2a0e290e2a0e290f0e0f280f00095d6f380f0d0e2a0f0d0e0e0f0e0e0e0e0e0e0e0f0e0e0e0e0e0e0e0f0e0e290f0d0f0e0e0e0e0e0e0e0f0e0e0e0e0e0f0d0f290f0d0e0e0f0e0e0e0e0e0e0e0f0e0e0e0f290e0e0e290f290f2810280f0d0f0e0e290e0e0f290f290f280f290f0d0e2a0f000d0500000000",
+                        "off": "2600cc006f370f0913290f0d0f0e0f0d0e0e0f0d0e0e100d0f0d0e0e0f0d0f0e0e290f0d100d0e0e0f0d0f0e0e0e0f0d0f0d0f0d10280f0d0e0e0f0e0e0e0f0d1308110d0f0d0e2a110b0e290f290f280e2a0e0e130810290f0d0f290f2810280f290f0d0f281000095c70370f0d0e2a0f0d0f0d0f0e0e0e0f0d0e0e0e0f0e0e0f0d0f0d0e0e0f290f0d0f0e0f0d0f0d0e0e0f0e0e0e0e0e0f0d0e2a0f0d0f0d0f0e0e0e0e0e0f0d0e0f0e0e0e29100d0e290f290f280f290f0d0f0d0f290f0d0e2a0f2810280f290f0d0f280f000d05000000000000000000000000"
+                    }
+                },
+                {
+                    "name": "Cocina",
+                    "type": "switch",
+                    "data": {
+                        "on": "b20d34000900013c0b1e0b1f0a1f0b1f0b1f0b1e0b1e0b1f0b1f1e0a1f0b1e0b1f0a1f0b1e0a1f0b1e0a0b1f1f0a0b1e1e0b1f0b1f0a1f0c00000000",
+                        "off": "b27b34000900013c0a1f0b1f0a1f0a1f0a1f0a1f0a1f0a1f0a1f1e0b1e0b1e0b1e0b1e0b1e0b1e0b1e0b0a1e1e0b0b1e0a1f1e0b1e0b1e0c00000000"
+                    }
+                },
+                {
+                    "name": "Enchufe",
+                    "type": "switch",
+                    "data": {
+                        "on": "b21634000900013d0b1e0b1e0b1e0b1e0b1f0b1f0b1f0a1f0b1e1f0a1f0a1f0a1f0a1f0b1f0b1f0b1f0b0a1f1f0a0a1f1e0b0b1e1f0b0b2000000000",
+                        "off": "b2ad34000900013c0a1f0a1f0a1f0a1f0a1f0b1e0a1f0a1f0a1f1e0b1e0b1e0b1e0b1e0b1e0b1e0b1e0b0a1f1e0b0a1f0a1f0a1f1f0b0a2000000000"
+                    }
+                },
+                {
+                    "name": "Canal arriba",
+                    "type": "switch",
+                    "enableAutoOff": true,
+                    "onDuration": 1,
+                    "data": "2600cc006f370f0e0e2a0e0d0f0e0e0d0f0d0f0f0d0f0d100d0f0e0d0e0e110c0f290d0e0f0e0e0e0f0d0f0e0d100c100e0d0e0e10280e0f0d0f0e0f0d0f0d0e0e0e0f0e0e0e0f0b110e0d2a0e0f0d2a0e2a0d0f0f0a110e0e0f0e290e0d11280e2a0e0b11290f0009ca70360e0e0f290f0d0f0f0d0e0d0f0f0d0e0f0f0d0f0e0c100d0f0d100d290f0d0f0e0e0e0e0e0f0e0e0f0e0d0e0f0d0f0e290e0e0f0e0e0e0e0e0e0f0d0f0d0f0e0f0d0e0e0e0f290e0a122a0e2a0d0c110e0f0d0f0d0f2a0d0f0d2a0f27110d10270e000d05000000000000000000000000"
+                },
+                {
+                    "name": "Canal abajo",
+                    "type": "switch",
+                    "enableAutoOff": true,
+                    "onDuration": 1,
+                    "data": "2600ca006f370e0e0f290e0e0e0f0e0e0f0d0b110e110c0e110a0f0f0d0f0e0e0e2913090e0f0f0e110c0d0e0d0f0c110d0f0d0e0d2b0f0d0f2a120a0e0f0e0d0e100d0e0e290f0d0f2e080f0e2a0e2a0e0e0e0e0e290f0e0e290e0f0e290f290f0e0d2a0e0009976d360f0e0e29120a0f0e0f0e0d0f0d0e0e0e0f0e0e0f0c100d0e0f0e0e2e090e110c0e110911110c0d0f0c100d0f0d0f0d28110d0f0d0e0c110e0e0e0f0e0d0f0d100d2a0d0f0e290e120a2a0e2a0f0d0e0f0c2b0e0f082e0f150a260e2b0d0e0e2a0e000d050000000000000000000000000000"
+                },
+                {
+                    "name": "Volumen arriba",
+                    "type": "switch",
+                    "enableAutoOff": true,
+                    "onDuration": 0.2,
+                    "data": "2600ca006f380d0f0e290e2b1209100d0d100d0e0f0e0f0d0e0e0e0f0e0e0e2a0e0e0e0e0e0f0c0f0e100d0e0e0f0d0f0e0e0e2a0d0f0d120a10110b0d0f0d0f0e0f0d0e0e0e0e0f0e0f0c0f0f0e0d2b0d0f0d0f0e0e0e0f0d0e0f0e0d0e0f2b0c0f0d2e0c000a396d380d0e0e2a0e0f0d0b120d0f0e0d100e0d0e0e0f0e0d100d0f0d0e07300f0f09130e110b0e0e0e0e0f0d0f0e0f0e12082b0e0e0e0f0d0f0d0f0f0d0d100e0d0e0f0e0f0d0f0d0f0d0f0a1311250e0f0e0f0d0d0f0f0d0f0e0e110b0f290e0f0d2a0e000d050000000000000000000000000000"
+                },
+                {
+                    "name": "Volumen abajo",
+                    "type": "switch",
+                    "enableAutoOff": true,
+                    "onDuration": 0.2,
+                    "data": "2600cc007332100e0e290f0e0e0e0f0d0f0d120b0e0e0f0d0f0d0f0e0e0e0f0d0e2a0e0f0d0e0e0d1014070f110b0f100c0e0e0b11290f0c100e0f0d1307100f0f0d0e0f0e0e0d2a100c0e0e0e0f0f0d0f280c110f11092a100d0e0d0f0d100d0f290f0d0d2b0f000a0070370e0e0e2a0f0d0e0e0f0d130a0e0e0c100e120a0f120a0e0e0f0d0f290f0d1307100f0e0e0d0f0f0d0f0d0f0e0e0f0e28100d0f0b1014090d1407100e0c100e0e0f290f0d0f0e0e0e0f11092a0f0f0e0d0e29100e0d0d0f0e0f0d0f29100c0f290e000d05000000000000000000000000"
+                }
+            ]
+        },
+        {
+            "platform": "Shelly",
+            "name": "Shelly",
+            "username": "jocadero",
+            "password": "shelly"
+        },
+        {
+            "name": "Config",
+            "port": 8581,
+            "platform": "config"
+        }
+    ],
+    "accessories": []
+}

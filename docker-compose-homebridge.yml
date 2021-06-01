@@ -4,9 +4,7 @@ services:
     container_name: homebridge
     image: oznu/homebridge:latest
     restart: unless-stopped
-    networks:
-      - proxy
-      - host
+    network_mode: host
     environment:
       - PUID=1001
       - PGID=1001
@@ -20,7 +18,7 @@ services:
       - "traefik.http.routers.homebridge-secure.entrypoints=websecure"
       - "traefik.http.routers.homebridge-secure.rule=Host(`homebridge.jocadero.com`)"
       - "traefik.http.services.homebridge.loadbalancer.server.port=8581"
-
-networks:
-  proxy:
-    external: true
+    expose:
+      - 51826
+    ports:
+      - 51826:51826
